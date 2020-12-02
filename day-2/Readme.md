@@ -9,3 +9,11 @@ Dec 1, 2020 . 21:14
 > 3. Notice the cin.ignore() is a powerful tool in c++. How would I modify the program to function even when errors are present.
 
 Note: Still a lot to learn. First, efficacy. Then efficiency.
+
+22:12
+
+>Wrote code using scanf
+> How do I effectively use strings ?
+> How do I work around to using char array and determine the perfect size ?
+> What is the effect of using too big a char array size than required ?
+> How to make code more efficient ?
