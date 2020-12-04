@@ -25,3 +25,5 @@ I thought about saving it in form of objects but, I do not know how big the data
 Even though a virtual problem, maybe it is not the best practices to store the info if the reason is to just check it.
 
 Anyway, I'll work on it later.
+
+Also, note that the solution of the first part is not present anymore. I absorbed the code into the second part of the challenge.
