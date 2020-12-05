@@ -65,5 +65,6 @@ int main() {
             cout << midSeatId <<endl;
     }
     //vector <vector <bool>> isMySeat //
+    myFile.close();
     return 0;
 }
