@@ -32,6 +32,15 @@ void getSorted( vector <int> &v) {
     }
 }
 
+int getBin( string s) {
+    string b ;
+      for( auto a: s) {
+         char c =( (a=='B'|| a=='R')? '1' : '0';
+         b += c; // Can you append char to string?
+      }
+    return stoi( b , 0,2); // directly gives back the decimal value of the bin ?
+}
+
 int main() {
     ifstream myFile;
     myFile.open("input");
