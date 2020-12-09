@@ -88,6 +88,7 @@ int main() {
     map < long long , long long > m;
     int l = 2;
     int star2 = 0;
+    /*
     for ( auto it = vecNumbers.begin() ; it != vecNumbers.end() && l <= vecNumbers.size() ; ++it) {
         m.merge( stars(vecNumbers , l));
         l++;
@@ -99,7 +100,33 @@ int main() {
         }
         m.clear();
     }
-    cout << star2 <<endl;
+     */
+    // The bottom solution is much faster
+    long long sum = 0;
+    auto itStart = vecNumbers.begin();
+    auto itEnd = vecNumbers.begin();
+    sum = 0;
+    while ( sum != star1 && itStart != vecNumbers.end()-1) { // now use pointers for the biggest elements ?
+        if (itStart == itEnd) {
+            itEnd = itStart +1;
+            sum = *itStart + *itEnd;
+            continue;
+        }
+        if(sum < star1) {
+            ++itEnd;
+            sum+= *itEnd;
+        }
+        else if (sum > star1) {
+            sum -= *itStart;
+            ++itStart;
+        }
+
+    }
+    long long min=0, max =0;
+    //partial sort
+    sort (itStart, itEnd+1 );
+
+    cout << *itStart + *itEnd <<endl;
     myFile.close();
     return 0;
 }
